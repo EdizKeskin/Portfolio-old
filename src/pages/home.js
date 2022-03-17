@@ -92,7 +92,7 @@ function Home() {
               fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
               textAlign={"center"}
             >
-              <Text mb={"2"}>
+              <Text mb={"2"} color="white">
                 I'm
                 <Text
                   as={"span"}
@@ -163,7 +163,7 @@ function Home() {
                   _hover={{ color: "yellow.300" }}
                   transition="all 0.3s"
                 >
-                  <FaGithub size={"30px"} />
+                  <FaGithub size={"30px"} color="white" />
                 </Text>
               </Tooltip>
 
@@ -184,7 +184,7 @@ function Home() {
                   _hover={{ color: "yellow.300" }}
                   transition="all 0.3s"
                 >
-                  <FaInstagram size={"30px"} />
+                  <FaInstagram size={"30px"} color="white"/>
                 </Text>
               </Tooltip>
 
@@ -205,7 +205,7 @@ function Home() {
                   _hover={{ color: "yellow.300" }}
                   transition="all 0.3s"
                 >
-                  <FaSteam size={"30px"} />
+                  <FaSteam size={"30px"} color="white"/>
                 </Text>
               </Tooltip>
 
@@ -225,7 +225,7 @@ function Home() {
                   _hover={{ color: "yellow.300" }}
                   transition="all 0.3s"
                 >
-                  <FaTwitter size={"30px"} />
+                  <FaTwitter size={"30px"} color="white"/>
                 </Text>
               </Tooltip>
             </Box>
@@ -237,7 +237,7 @@ function Home() {
             display={{ base: "none", md: "flex" }}
           >
             <Link href="#skills">
-              <Button variant={"outline"} backdropFilter={"blur(2px)"}>
+              <Button variant={"outline"} backdropFilter={"blur(2px)"} color="white">
                 About
               </Button>
             </Link>
@@ -268,7 +268,7 @@ function Home() {
             <Heading as={"h2"} color={"red.400"}>
               Favorite activities
             </Heading>
-            <List spacing={3}>
+            <List spacing={3} color="white">
               <ListItem>
                 <ListIcon as={AiOutlineDoubleRight} color="green.500" />
                 Playing video games
@@ -296,7 +296,7 @@ function Home() {
             <Heading as={"h2"} color={"red.400"}>
               Favorite Movies and Series
             </Heading>
-            <List spacing={3}>
+            <List spacing={3} color="white">
               <ListItem>
                 <ListIcon as={AiOutlineDoubleRight} color="green.500" />
                 Breaking Bad
@@ -344,6 +344,7 @@ function Home() {
               alignItems={"center"}
               justifyContent="center"
               data-aos="zoom-in-up"
+              color="white"
             >
               <Box display={"flex"} flexDirection="row" mr={"20px"}>
                 {skill.icon && (

@@ -18,6 +18,7 @@ function Card({ item }) {
         rounded={"lg"}
         p={6}
         overflow={"hidden"}
+        data-aos="zoom-in-up"
       >
         <Box bg={"gray.100"} mt={-6} mx={-6} mb={6} width={"fit-content"}>
           <Image src={item.image} objectFit="cover" />

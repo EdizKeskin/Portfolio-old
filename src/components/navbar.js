@@ -71,7 +71,10 @@ function Navbar() {
 
   return (
     <Box backdropFilter={"blur(2px)"} data-aos="fade-down">
-      <Flex flexDirection="row" justifyContent={{base:"normal", lg:"center"}}>
+      <Flex
+        flexDirection="row"
+        justifyContent={{ base: "normal", lg: "center" }}
+      >
         <Flex
           ml={{ base: -2 }}
           display={{ base: "flex", sm: "none" }}
@@ -84,7 +87,7 @@ function Navbar() {
               isOpen ? (
                 <IoClose color="white" w={5} h={20} />
               ) : (
-                <GiHamburgerMenu w={5} h={5} />
+                <GiHamburgerMenu w={5} h={5} color="white" />
               )
             }
             variant={"ghost"}

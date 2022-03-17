@@ -14,7 +14,6 @@ import {
   Textarea,
   Tooltip,
   useClipboard,
-  useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
@@ -85,6 +84,7 @@ function Contact() {
                 justify="space-around"
                 direction={{ base: "row", md: "column" }}
                 data-aos="zoom-in-down"
+                color="white"
               >
                 <Tooltip
                   label={hasCopied ? "Email Copied!" : "Copy Email"}
@@ -99,7 +99,7 @@ function Contact() {
                     icon={<MdEmail />}
                     _hover={{
                       bg: "blue.500",
-                      color: useColorModeValue("white", "gray.700"),
+                      color: "gray.700",
                     }}
                     onClick={onCopy}
                     isRound
@@ -121,7 +121,7 @@ function Contact() {
                       icon={<BsGithub />}
                       _hover={{
                         bg: "blue.500",
-                        color: useColorModeValue("white", "gray.700"),
+                        color: "gray.700",
                       }}
                       isRound
                     />
@@ -145,7 +145,7 @@ function Contact() {
                       icon={<BsInstagram size="28px" />}
                       _hover={{
                         bg: "blue.500",
-                        color: useColorModeValue("white", "gray.700"),
+                        color: "gray.700",
                       }}
                       isRound
                     />
@@ -169,7 +169,7 @@ function Contact() {
                       icon={<BsTwitter size="28px" />}
                       _hover={{
                         bg: "blue.500",
-                        color: useColorModeValue("white", "gray.700"),
+                        color: "gray.700",
                       }}
                       isRound
                     />
@@ -177,11 +177,11 @@ function Contact() {
                 </Tooltip>
               </Stack>
               <Box
-                bg={useColorModeValue("white", "gray.700")}
+                bg="gray.700"
                 borderRadius="lg"
                 p={8}
                 width={{ base: "", md: "400px" }}
-                color={useColorModeValue("gray.700", "whiteAlpha.900")}
+                color="whiteAlpha.900"
                 shadow="base"
                 data-aos="zoom-in-up"
               >
