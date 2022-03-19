@@ -9,6 +9,7 @@ import Home from "./pages/home";
 import Navbar from "./components/navbar";
 import Contact from "./pages/contact";
 import Projects from "./pages/projects";
+import Err404 from "./pages/err404";
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="*" element={<Err404 />} />
         </Routes>
       </div>
       <Particles
