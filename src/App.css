@@ -26,3 +26,12 @@
 *:focus {
     box-shadow: none !important;
 }
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+canvas:hover {
+    cursor: grab;
+}

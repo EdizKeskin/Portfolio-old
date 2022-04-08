@@ -1,9 +1,9 @@
+import { Suspense } from "react";
 import {
   Box,
   Container,
   Stack,
   Text,
-  Image,
   Flex,
   Heading,
   SimpleGrid,
@@ -33,12 +33,19 @@ import Typewriter from "typewriter-effect";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 import ProgressBar from "react-animated-progress-bar";
 
+import Model from "../components/logo";
+import { Canvas } from "@react-three/fiber";
+import { Loader, OrbitControls, ContactShadows } from "@react-three/drei";
+
 function Home() {
   const textColor = useColorModeValue("black", "white");
+  const fov = useBreakpointValue({ base: 6, sm: 6, md: 4 });
+
   const barSize = useBreakpointValue({
     base: "300px",
     md: "400px",
   });
+
   const skills = [
     {
       name: "HTML",
@@ -72,19 +79,43 @@ function Home() {
         spacing={{ base: 8, md: 10 }}
         py={{ base: 18, md: 24 }}
       >
-        <Flex data-aos="zoom-in-right">
-          <Image
-            rounded={"md"}
-            backdropFilter={"blur(2px)"}
-            alt={"avatar"}
-            src={"https://i.ibb.co/pWTXY6n/Siyah.png"}
-            fit={"cover"}
+        <Flex data-aos="zoom-in-up">
+          <Box
             align={"center"}
-            w={"100%"}
-            h={{ base: "100%", sm: "100%", lg: "500px" }}
-          />
+            backdropFilter={"blur(2px)"}
+            w="500px"
+            h="500px"
+          >
+            <Canvas
+              width={700}
+              height={700}
+              pixelRatio={[1, 2]}
+              camera={{ position: [-3, 2, 15], fov: fov }}
+            >
+              <ambientLight intensity={0.6} />
+              <directionalLight position={[-2, 5, 2]} />
+              <Suspense fallback={null}>
+                <Model />
+                <ContactShadows
+                  rotation-x={Math.PI / 2}
+                  position={[0, -0.8, 0]}
+                  opacity={1}
+                  width={10}
+                  height={10}
+                  blur={1.5}
+                  far={0.8}
+                />
+              </Suspense>
+              <OrbitControls
+                makeDefault
+                minPolarAngle={0}
+                maxPolarAngle={Math.PI / 1.75}
+              />
+            </Canvas>
+            <Loader />
+          </Box>
         </Flex>
-        <Stack data-aos="zoom-in-left">
+        <Stack data-aos="zoom-in-up">
           <Box as={"header"}>
             <Heading
               lineHeight={1.1}
@@ -138,7 +169,7 @@ function Home() {
           <Stack alignItems={"center"}>
             <Box
               display={"flex"}
-              flexDirection="row"
+              flexDirection={"row"}
               alignItems={"center"}
               justifyContent="center"
               backdropFilter={"blur(2px)"}
@@ -184,7 +215,7 @@ function Home() {
                   _hover={{ color: "yellow.300" }}
                   transition="all 0.3s"
                 >
-                  <FaInstagram size={"30px"} color="white"/>
+                  <FaInstagram size={"30px"} color="white" />
                 </Text>
               </Tooltip>
 
@@ -205,7 +236,7 @@ function Home() {
                   _hover={{ color: "yellow.300" }}
                   transition="all 0.3s"
                 >
-                  <FaSteam size={"30px"} color="white"/>
+                  <FaSteam size={"30px"} color="white" />
                 </Text>
               </Tooltip>
 
@@ -225,7 +256,7 @@ function Home() {
                   _hover={{ color: "yellow.300" }}
                   transition="all 0.3s"
                 >
-                  <FaTwitter size={"30px"} color="white"/>
+                  <FaTwitter size={"30px"} color="white" />
                 </Text>
               </Tooltip>
             </Box>
@@ -237,7 +268,13 @@ function Home() {
             display={{ base: "none", md: "flex" }}
           >
             <Link href="#skills">
-              <Button variant={"outline"} backdropFilter={"blur(2px)"} color="white">
+              <Button
+                variant={"outline"}
+                backdropFilter={"blur(2px)"}
+                color="white"
+                transition="all 0.3s"
+                _hover={{ bgColor: "transparent", color: "red.400" }}
+              >
                 About
               </Button>
             </Link>
@@ -263,7 +300,7 @@ function Home() {
             spacing={{ base: 4, sm: 6 }}
             alignItems="rigth"
             backdropFilter={"blur(2px)"}
-            data-aos="zoom-in-right"
+            data-aos="zoom-in-up"
           >
             <Heading as={"h2"} color={"red.400"}>
               Favorite activities
@@ -291,7 +328,7 @@ function Home() {
             spacing={{ base: 4, sm: 6 }}
             alignItems="rigth"
             backdropFilter={"blur(2px)"}
-            data-aos="zoom-in-left"
+            data-aos="zoom-in-up"
           >
             <Heading as={"h2"} color={"red.400"}>
               Favorite Movies and Series

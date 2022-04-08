@@ -5,11 +5,12 @@ function CustomSpinner() {
   return (
     <Flex justifyContent="center" alignItems="center" height="100vh">
       <Spinner
-        thickness="4px"
-        speed="0.65s"
-        emptyColor="gray.200"
         size="xl"
-        color="teal"
+        position="absolute"
+        left="50%"
+        top="50%"
+        ml="calc(0px - var(--spinner-size) / 2)"
+        mt="calc(0px - var(--spinner-size))"
       />
     </Flex>
   );
