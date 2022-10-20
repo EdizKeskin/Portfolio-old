@@ -144,7 +144,7 @@ function Home() {
                   Ediz Keskin
                 </Text>
               </Text>
-              <Text as={"span"} color={"red.400"}>
+              <Text fontSize={{base:"2xl", sm: "4xl", lg: "6xl" }} as={"span"} color={"red.400"}>
                 <Typewriter
                   options={{
                     autoStart: true,
