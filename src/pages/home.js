@@ -249,7 +249,7 @@ function Home() {
               >
                 <Text
                   as={"a"}
-                  href={"https://twitter.com/sharpness_4"}
+                  href={"https://twitter.com/EdizKeskin_"}
                   target="_blank"
                   rel="noopener noreferrer"
                   color={textColor}
