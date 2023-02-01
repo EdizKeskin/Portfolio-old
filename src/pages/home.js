@@ -59,7 +59,7 @@ function Home() {
     },
     {
       name: "JavaScript",
-      value: "40",
+      value: "70",
       icon: <FaJs size="1.5em" />,
     },
     {
