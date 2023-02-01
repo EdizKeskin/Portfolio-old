@@ -31,7 +31,7 @@ GPL-3.0 License.
 
 You can create your own homepage for free without notifying me by forking this project under the following conditions:
 
-- Add a link to [my homepage](https://edizkeskin.com/)
+- Add a link to [my homepage](https://edizkeskin.com.tr/)
 
 <br />
 
