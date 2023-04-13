@@ -1,8 +1,7 @@
-# Portfolio-Website
 
-[Live Preview](https://edizkeskin.com/)
 
-[![Demo](./public/thumbnail.png)](https://edizkeskin.com/)
+ ‼️ [New version is here](https://github.com/EdizKeskin/Portfolio)
+
 
 ## Stack
 
